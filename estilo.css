@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.main{
+    width: 100%;
+    
+}
+
+.section_1{
+   background: url("img/adopcion.png") no-repeat right top;
+  height: calc(100vh);
+}
+
+.header{
+    background-color: white;
+    /*background: #50505083;*/
+    width: 100%;
+    height: 75px;
+    display: flex;
+}
+
+.header-logo{
+    width: 30%;
+}
+
+.logo{
+    object-fit: cover;
+    height: 100%;
+    padding: 20px 30px;
+}
+
+
+
+.nav{
+    width: 70%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    margin: 1% 3%;
+}
+
+.link:hover{
+    color:blueviolet;
+}
+
+.contenedor{
+    margin: auto;
+
+}
+
+.section-2{
+    width: 80%;
+    margin: auto;
+    padding: 75px 0;
+    
+    
+}
+
+.section-2-titulo{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: aquamarine;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.us{
+    display: flex;
+}
+.us-texto{
+    width: 60%;
+    padding: 0 10% 0 0;
+}
+
+.us-parrafo{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: grey;
+    text-align: justify;
+}
+
+.parrafo-texto{
+    margin: 10px 0;
+}
+
+.us-img{
+    width: 40%;
+}
+
+.img-img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contenedorr{
+    width: 100%;
+    max-width: 1200px;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+.carta{
+    width: 330px;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+}
+
+.carta img{
+    width: 340px;
+    height: 260px;
+}
+
+.carta h4{
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 20px;
+    
+    color: aquamarine;
+}
+
+.carta p{
+    padding: 0 1rem;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/*Donaciones*/
+
+.contenedor-donaciones{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+    flex-wrap: wrap;
+    display: flex;
+    
+    
+    
+}
+
+.donaciones{
+    width: 300px;
+    height: 330px;
+    border-radius: 8px;
+    /*box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);*/
+    margin: 5px;
+    
+    
+}
+
+.donaciones h2{
+    
+    font-size: 20px;
+    color: #209689;
+    padding: 30px 30px ;
+}
+
+.donaciones p{
+    padding: 0 1rem;
+    font-size: 16px;
+    text-align: justify;
+    color: #5e5e5e;
+}
+
+
+
+/*Carrousel*/
+
+#carousel {
+    display: flex;
+    padding: 60px 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#image {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*forumulario
+body {
+ font-family: 'Roboto', sans-serif;
+ background-color: orange;
+}
+form {
+ width: 300px;
+ border: 5px inset gold;
+ color: white;
+ background-color: navy;
+ padding: 10px;
+}
+.d-block {
+ display: block;
+}
+.mt1 {
+ margin-top: 5px;
+}
+.mt2 {
+ margin-top: 10px;
+}
+.mt3 {
+ margin-top: 15px;
+}
+.error {
+ border: 2px dashed red;
+}

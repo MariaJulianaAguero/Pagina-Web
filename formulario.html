@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body> 
+    <main class="main">
+        <section class="contenedor section_1">
+            <header class="header">
+                <div class="header-logo">
+                    <img src="img/logoo.png" class="logo">
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="link">Inicio</a>
+                    <a href="adopcion.html" class="link">Adopcion</a>
+                    <a href="formulario.html" class="link">Contacto</a>
+                </nav>
+            </header>
+        </section>
+    </main>
+
+    <h2>Demo de JS</h2>
+<form onsubmit="return saludar()" id="frm">
+ <label class="d-block mt1" for="f_nombre">Nombre</label>
+ <input class="d-block" id="f_nombre" name="f_nombre" />
+ <label class="d-block mt1" for="f_apellido">Apellido</label>
+ <input class="d-block" id="f_apellido" name="f_apellido" />
+ <label class="d-block mt1" for="f_deporte">Deporte</label>
+ <select class="d-block" id="f_deporte" name="f_deporte">
+  <option disabled selected value="">Seleccionar una opción</option>
+  <option>Fútbol</option>
+  <option>Rugby</option>
+  <option>Golf</option>
+ </select>
+ <label class="d-block mt1" for="f_tyc">¿Acepta los términos?</label>
+ <div>
+  <input class="d-block" id="f_tyc" name="f_tyc" type="checkbox" />
+ </div>
+ <button class="d-block mt3" type="submit" id="btnSaludar">
+ 	Saludar
+ </button>
+</form>
+
+<p id="pSaludo"></p>
+
+<ul id="ltaErrores">
+</ul>
+</body>
