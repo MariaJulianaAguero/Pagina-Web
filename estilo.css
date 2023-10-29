@@ -14,7 +14,7 @@ body{
 }
 
 .section_1{
-   background: url("img/adopcion.png") no-repeat right top;
+   background: url("adopcion.png") no-repeat right top;
   height: calc(100vh);
 }
 
