@@ -39,8 +39,8 @@ function saludar(){
  let nombre = f_nombre.value.trim();
  let f_apellido = document.getElementById("f_apellido");
  let apellido = f_apellido.value.trim();
- let f_deporte = document.getElementById("f_deporte");
- let deporte = f_deporte.value;
+ let f_contacto = document.getElementById("f_contacto");
+ let contacto = f_contacto.value;
  let f_tyc = document.getElementById("f_tyc");
  let tyc = f_tyc.checked;
  let errores = [];
@@ -66,10 +66,10 @@ function saludar(){
   campo_error = f_apellido;
   f_apellido.classList.add("error");
  }
- if(deporte == "") {
-  errores.push("Falta el deporte");
-  campo_error = f_deporte;
-  f_deporte.classList.add("error");
+ if(contacto == "") {
+  errores.push("Falta el contacto");
+  campo_error = f_contacto;
+  f_contacto.classList.add("error");
  }
  if(!tyc) {
   errores.push("Debe aceptar los términos y condiciones");
