@@ -211,9 +211,9 @@ body {
 }
 form {
  width: 300px;
- border: 5px inset gold;
- color: white;
- background-color: navy;
+ box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+ color: grey;
+ background-color: whitesmoke;
  padding: 10px;
 }
 .d-block {
