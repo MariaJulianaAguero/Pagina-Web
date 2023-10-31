@@ -61,7 +61,7 @@ function validarFormulario() {
 
     
     if (edad < 18 || edad >= 100) {
-        mensajeError += "Edad inválida. Debe ser mayor o igual a 18 y menor a 100.\n";
+        mensajeError += "Edad inválida. Debe ser mayor o igual a 18 \n";
         document.getElementById("error-edad").textContent = "Edad inválida";
     } else {
         document.getElementById("error-edad").textContent = "";
