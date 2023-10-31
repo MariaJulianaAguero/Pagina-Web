@@ -29,66 +29,65 @@ prevButton.addEventListener('click', prevImage);
 
 updateImage();
 
-const pSaludo = document.getElementById("pSaludo");
-const ltaErrores = document.getElementById("ltaErrores");
-const btnSaludar = document.getElementById("btnSaludar");
-//btnSaludar.addEventListener("click", saludar);
-
-function saludar(){
- let f_nombre = document.getElementById("f_nombre");
- let nombre = f_nombre.value.trim();
- let f_apellido = document.getElementById("f_apellido");
- let apellido = f_apellido.value.trim();
- let f_contacto = document.getElementById("f_contacto");
- let contacto = f_contacto.value;
- let f_tyc = document.getElementById("f_tyc");
- let tyc = f_tyc.checked;
- let errores = [];
+/*Formulario*/
+function validarFormulario() {
+    
+    var nombre = document.getElementById("nombre").value;
+    var email = document.getElementById("email").value;
+    var edad = document.getElementById("edad").value;
+    var mensaje = document.getElementById("mensaje").value;
+    let errores = [];
  let campo_error = null;
  
  let frm = document.getElementById("frm");
- /*
- for (v of frm.children) {
-  v.classList.remove("error");
- }*/
- 
- for (v of frm.querySelectorAll("input,select,div")) {
-  v.classList.remove("error");
- }
- 
- if(nombre == "") {
-  errores.push("Falta el nombre");
-  campo_error = f_nombre;
-  f_nombre.classList.add("error");
- }
- if(apellido == "") {
-  errores.push("Falta el apellido");
-  campo_error = f_apellido;
-  f_apellido.classList.add("error");
- }
- if(contacto == "") {
-  errores.push("Falta el contacto");
-  campo_error = f_contacto;
-  f_contacto.classList.add("error");
- }
- if(!tyc) {
-  errores.push("Debe aceptar los términos y condiciones");
-  campo_error = f_tyc;
-  f_tyc.parentNode.classList.add("error");
- }
- ltaErrores.innerHTML = "";
- if(errores.length > 0) {
-  for(let i=0;i<errores.length;i++) {
-   let li = document.createElement("li");
-   li.innerHTML = errores[i];   
-   ltaErrores.appendChild(li);
-  }
-  if(campo_error != null) {
-   campo_error.focus();
-  }
-  return false;
- }
- let mje = `Hola ${nombre} ${apellido}, ¡Bienvenido a ${deporte}!`;
- pSaludo.innerHTML = mje;
- return false;
+    
+    var mensajeError = "";
+
+    
+    if (nombre.length === 0 || nombre.length > 30) {
+        mensajeError += "Nombre inválido. Debe tener entre 1 y 30 caracteres.\n";
+        document.getElementById("error-nombre").textContent = "Nombre inválido";
+    } else {
+        document.getElementById("error-nombre").textContent = "";
+    }
+
+    
+    if (email.length > 0 && !email.includes("@")) {
+        mensajeError += "Email inválido. Debe contener un @.\n";
+        document.getElementById("error-email").textContent = "Email inválido";
+    } else {
+        document.getElementById("error-email").textContent = "";
+    }
+
+    
+    if (edad < 18 || edad >= 100) {
+        mensajeError += "Edad inválida. Debe ser mayor o igual a 18 y menor a 100.\n";
+        document.getElementById("error-edad").textContent = "Edad inválida";
+    } else {
+        document.getElementById("error-edad").textContent = "";
+    }
+
+    
+    if (mensaje.length === 0 || mensaje.length > 200) {
+        mensajeError += "Mensaje inválido. Debe tener entre 1 y 200 caracteres.\n";
+        document.getElementById("error-mensaje").textContent = "Mensaje inválido";
+    } else {
+        document.getElementById("error-mensaje").textContent = "";
+    }
+
+    
+    if (mensajeError !== "") {
+        alert("Corrija los siguientes errores:\n" + mensajeError);
+        return false;
+    }
+
+    
+    var datosIngresados = "Nombre: " + nombre + "<br>Email: " + email + "<br>Edad: " + edad + "<br>Mensaje: " + mensaje;
+    document.getElementById("datos-ingresados").innerHTML = datosIngresados;
+    document.getElementById("formulario").style.display = "none";
+    document.getElementById("mensaje-enviado").style.display = "block";
+
+    return false; 
 }
+
+

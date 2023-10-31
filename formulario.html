@@ -8,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
-<script src="script.js"></script>    
+<link rel="stylesheet" href="estilo.css">
+<script src="script.js"></script>
 <title>Huellitas</title>
 </head>
 <body> 
     <main class="main">
-        <section class="contenedor section_1">
+        <section class="contenedor adopcion">
             <header class="header">
                 <div class="header-logo">
                     <img src="logoo.png" class="logo">
@@ -24,30 +25,41 @@
                     <a href="formulario.html" class="link">Contacto</a>
                 </nav>
             </header>
+            
         </section>
     </main>
+  
+    <section class="datos">
 
-    <h2>Contacto</h2>
-<form onsubmit="return saludar()" id="frm">
- <label class="d-block mt1" for="f_nombre">Nombre</label>
- <input class="d-block" id="f_nombre" name="f_nombre" />
- <label class="d-block mt1" for="f_apellido">Apellido</label>
- <input class="d-block" id="f_apellido" name="f_apellido" />
- <label class="d-block mt1" for="f_contacto">Contacto</label>
- <select class="d-block" id="f_contacto" name="f_contacto">
-  <option disabled selected value="">Seleccionar una opción</option>
-  <option>Adopcion</option>
-  <option>Transito</option>
-  <option>Donacion</option>
- </select>
- 
- <button class="d-block mt3" type="submit" id="btnSaludar">
- 	Enviar
- </button>
-</form>
-
-<p id="pSaludo"></p>
-
-<ul id="ltaErrores">
-</ul>
+        <div id="formularioParcial">
+            <form id="formu" onsubmit="return validarFormulario()">
+               
+                <div class="div-input">
+                    <label for="infonombre">Ingrese el nombre :</label>
+                    <input type="text" id="nombre" maxlength="30" required>
+                    <div class="error" id="error-nombre"></div>
+                </div>
+                <div class="div-input">
+                    <label for="infoemail">Ingrese el Email :</label>
+                    <input type="email" id="email" maxlength="20">
+                    <div class="error" id="error-email"></div>
+                </div>
+                <div class="div-input"> 
+                  <label for="infoedad">Ingrese la edad :</label>
+                <input type="text" id="edad" required pattern="\d*" title="Ingresa solo numeros">
+                <div class="error" id="error-edad"></div>
+                </div>
+                <div class="div-input">
+                    <label for="infomensaje">Motivo de su consulta:</label>
+                    <textarea id="mensaje" maxlength="200" required></textarea>
+                    <div class="error" id="error-mensaje"></div>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <div id="mensaje-enviado" style="display: none;">
+            <h3>Mensaje enviado</h3>
+            <div  id="datos-ingresados"></div>
+        </div>
+    </section>
 </body>

@@ -209,35 +209,32 @@ button {
     cursor: pointer;
 }
 
-/*forumulario*/
-body {
- font-family: 'Roboto', sans-serif;
- 
-}
+/*formulario*/
+
 form {
- width: 300px;
- box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
- color: grey;
- background-color: whitesmoke;
- padding: 10px;
- margin: auto;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #85929E;
+   
 }
-.d-block {
- display: block;
+label {
+    display: block;
+    margin-bottom: 6px;
+   
 }
-.mt1 {
- margin-top: 5px;
-}
-.mt2 {
- margin-top: 10px;
-}
-.mt3 {
- margin-top: 15px;
-}
-.error {
- border: 2px dashed red;
+input, textarea {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    
 }
 
+ 
 .contenedor-footer{
 background-color: #FF8C22;
 width: 100%;
