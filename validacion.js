@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
        
 
-    if (valorEdad < 18 || valorEdad  <= 100) {
+    if (valorEdad < 18 || valorEdad  >= 100) {
         result.innerHTML = "<p>La edad no es válida, debe tener igual o mayor a 18.</p>";
             return false;
     }
