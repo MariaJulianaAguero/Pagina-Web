@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return false;
         }
 
+        
+
         var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         if (!valorEmail.match(emailPattern)) {
             result.innerHTML = "<p>El email no es válido, asegúrese de escribirlo correctamente.</p>";
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
        
 
-    if (valorEdad < 18 || valorEdad  >= 100) {
+    if (valorEdad < 18 || valorEdad  <= 100) {
         result.innerHTML = "<p>La edad no es válida, debe tener igual o mayor a 18.</p>";
             return false;
     }
