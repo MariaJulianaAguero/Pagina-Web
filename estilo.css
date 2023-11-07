@@ -225,7 +225,6 @@ button {
     }
 
 /*formulario*/
-
 form {
     max-width: 400px;
     margin: 0 auto;
@@ -277,4 +276,5 @@ input[type="submit"]:hover,
 div {
     display: block;
 }
+
  
